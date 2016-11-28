@@ -1,146 +1,41 @@
-body, h1, h2, h3, p {
-  margin: 0; }
+/*
+Error: Invalid CSS after "..."mediaqueries";": expected "}", was ""
+        on line 190 of css/style.scss
 
-header {
-  position: relative;
-  height: 500px;
-  width: 100%; }
-  header .headervideo {
-    overflow: hidden;
-    position: absolute;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: -100; }
-  header .navbar {
-    padding: 30px 15% 0 15%;
-    overflow: hidden; }
-    header .navbar .logo {
-      float: left;
-      height: 75px; }
-    header .navbar .navright, header .navbar .dropdown {
-      float: right;
-      padding: 0; }
-      header .navbar .navright li, header .navbar .dropdown li {
-        display: inline;
-        list-style: none;
-        margin-right: 5px; }
-        header .navbar .navright li a, header .navbar .dropdown li a {
-          text-decoration: none;
-          font-family: sans-serif;
-          font-size: 16px;
-          color: #305291;
-          background-color: white;
-          padding: 15px; }
-        header .navbar .navright li a:hover, header .navbar .dropdown li a:hover {
-          color: white;
-          background-color: #305291; }
-  header .dropdown {
-    display: none; }
-  header .navbar .navright .aboutus:hover .dropdown, header .navbar .dropdown .aboutus:hover .dropdown {
-    display: block; }
-  header .headertext {
-    text-align: center;
-    text-transform: uppercase;
-    line-height: 4em;
-    font-family: sans-serif;
-    color: #305291;
-    position: relative;
-    top: 60px; }
-    header .headertext h1 {
-      font-size: 43px; }
-    header .headertext p {
-      font-size: 20px;
-      color: white; }
+185: 
+186: 
+187: 
+188: // media queries
+189: @import "mediaqueries";
 
-.about {
-  height: auto;
-  background-color: #305291;
-  color: white;
-  margin: 0;
-  text-align: center;
-  font-family: sans-serif;
-  box-sizing: border-box;
-  padding: 7% 15% 5% 15%;
-  line-height: 40px; }
-
-.issuescontainer {
-  background-color: #f2f2f2;
-  text-align: center;
-  font-family: sans-serif;
-  box-sizing: border-box;
-  padding: 7% 15% 5% 15%;
-  margin: 0;
-  height: auto; }
-  .issuescontainer h1 {
-    font-size: 1.5em;
-    color: #305291; }
-  .issuescontainer p {
-    font-size: 20px;
-    color: black;
-    line-height: 2em; }
-  .issuescontainer .issuescolumns {
-    background-color: white;
-    display: inline-block;
-    position: relative;
-    box-sizing: border-box;
-    width: 23%;
-    height: 350px;
-    vertical-align: top;
-    margin: 30px .7%; }
-    .issuescontainer .issuescolumns .issuescontent {
-      position: absolute;
-      top: 30px;
-      right: 2px;
-      margin: 3%; }
-    .issuescontainer .issuescolumns .fa {
-      border: 1px solid #305291;
-      color: #305291;
-      padding: 10px;
-      border-radius: 50%;
-      font-size: 30px; }
-    .issuescontainer .issuescolumns .fa:hover {
-      color: white;
-      background-color: #305291; }
-    .issuescontainer .issuescolumns h2 {
-      color: #305291;
-      font-size: 1.17em;
-      margin-top: 20px; }
-    .issuescontainer .issuescolumns p {
-      font-size: 1em;
-      line-height: 2em;
-      color: #666;
-      margin-top: 20px; }
-
-footer {
-  background-color: #f2f2f2;
-  height: auto;
-  text-align: center; }
-  footer hr {
-    margin: 0; }
-  footer p {
-    display: inline-block;
-    color: #305291;
-    margin-top: 4%;
-    margin-bottom: 1%;
-    width: 33%;
-    font-family: sans-serif; }
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .issuescontainer .issuescolumns {
-    width: 46%; } }
-@media (max-width: 767px) {
-  header .navbar {
-    padding: 20px 5% 0 5%; }
-  header .headertext {
-    line-height: 3em;
-    margin: 0 2% 0 2%; }
-
-  .issuescontainer .issuescolumns {
-    width: 100%; }
-
-  footer p {
-    width: 100%; } }
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+css/style.scss:190
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:658:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:649:in `ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...\"mediaqueries\";\": expected \"}\", was \"\"\A         on line 190 of css/style.scss\A \A 185: \A 186: \A 187: \A 188: // media queries\A 189: @import \"mediaqueries\";"; }

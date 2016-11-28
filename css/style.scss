@@ -32,6 +32,19 @@ header{
     .navright{
       float:right;
       padding:0;
+        .aboutus{
+          position:relative;
+          .dropdown{
+        @extend .navright;
+        display:none;
+        position:absolute;
+      }
+
+      .aboutus:hover{
+        .dropdown{
+          display:block;
+        }
+      }
 
       li{
         display:inline;
@@ -54,20 +67,7 @@ header{
     }
   }
 
-  .dropdown{
-    @extend .navright;
-    display:none;
-  }
 
-  .navbar{
-    .navright{
-      .aboutus:hover{
-        .dropdown{
-          display:block;
-        }
-      }
-    }
-  }
 
   .headertext{
     text-align:center;
