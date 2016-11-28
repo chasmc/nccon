@@ -1,15 +1,5 @@
 
-$blue:#305291;
-$lightgray:#f2f2f2;
-$gray:#666;
-
-@mixin verticalalign{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-
+@import "variables";
 
 body, h1, h2, h3, p{
   margin:0;
@@ -38,9 +28,11 @@ header{
       float:left;
       height:75px;
     }
+
     .navright{
       float:right;
       padding:0;
+
       li{
         display:inline;
         list-style:none;
@@ -52,6 +44,26 @@ header{
           color:$blue;
           background-color:white;
           padding:15px;
+        }
+
+        a:hover{
+          color:white;
+          background-color:$blue;
+        }
+      }
+    }
+  }
+
+  .dropdown{
+    @extend .navright;
+    display:none;
+  }
+
+  .navbar{
+    .navright{
+      .aboutus:hover{
+        .dropdown{
+          display:block;
         }
       }
     }
@@ -79,7 +91,6 @@ header{
 }
 
 .about{
-  // height:300px;
   height:auto;
   background-color:$blue;
   color:white;
@@ -111,13 +122,13 @@ header{
     color:black;
     line-height:2em;
   }
-  .issues{
+  .issuescolumns{
     background-color:white;
     display:inline-block;
     position:relative;
     box-sizing:border-box;
     width:23%;
-    height:300px;
+    height:350px;
     vertical-align:top;
     margin:30px .7%;
 
@@ -128,11 +139,15 @@ header{
       margin:3%;
     }
     .fa{
-      border:1px solid #305291;
+      border:1px solid $blue;
       color:$blue;
       padding:10px;
       border-radius:50%;
-      width:30px;
+      font-size:30px;
+    }
+    .fa:hover{
+      color:white;
+      background-color:$blue;
     }
     h2{
       color:$blue;
@@ -170,40 +185,5 @@ footer{
 
 
 
-
 // media queries
-
-// tablet
-@media(min-width:768px) and (max-width:1024px){
-  .issuescontainer{
-    .issues{
-      width:46%;
-    }
-  }
-}
-
-// phone
-@media(max-width:767px){
-header{
-  .navbar{
-    padding:20px 5% 0 5%;
-  }
-
-  .headertext{
-    line-height:3em;
-    margin:0 2% 0 2%;
-  }
-}
-
-  .issuescontainer{
-    .issues{
-      width:100%;
-    }
-  }
-
-  footer{
-    p{
-      width:100%;
-    }
-  }
-}
+@import "mediaqueries";

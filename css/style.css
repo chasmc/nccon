@@ -19,20 +19,27 @@ header {
     header .navbar .logo {
       float: left;
       height: 75px; }
-    header .navbar .navright {
+    header .navbar .navright, header .navbar .dropdown {
       float: right;
       padding: 0; }
-      header .navbar .navright li {
+      header .navbar .navright li, header .navbar .dropdown li {
         display: inline;
         list-style: none;
         margin-right: 5px; }
-        header .navbar .navright li a {
+        header .navbar .navright li a, header .navbar .dropdown li a {
           text-decoration: none;
           font-family: sans-serif;
           font-size: 16px;
           color: #305291;
           background-color: white;
           padding: 15px; }
+        header .navbar .navright li a:hover, header .navbar .dropdown li a:hover {
+          color: white;
+          background-color: #305291; }
+  header .dropdown {
+    display: none; }
+  header .navbar .navright .aboutus:hover .dropdown, header .navbar .dropdown .aboutus:hover .dropdown {
+    display: block; }
   header .headertext {
     text-align: center;
     text-transform: uppercase;
@@ -73,31 +80,34 @@ header {
     font-size: 20px;
     color: black;
     line-height: 2em; }
-  .issuescontainer .issues {
+  .issuescontainer .issuescolumns {
     background-color: white;
     display: inline-block;
     position: relative;
     box-sizing: border-box;
     width: 23%;
-    height: 300px;
+    height: 350px;
     vertical-align: top;
     margin: 30px .7%; }
-    .issuescontainer .issues .issuescontent {
+    .issuescontainer .issuescolumns .issuescontent {
       position: absolute;
       top: 30px;
       right: 2px;
       margin: 3%; }
-    .issuescontainer .issues .fa {
+    .issuescontainer .issuescolumns .fa {
       border: 1px solid #305291;
       color: #305291;
       padding: 10px;
       border-radius: 50%;
-      width: 30px; }
-    .issuescontainer .issues h2 {
+      font-size: 30px; }
+    .issuescontainer .issuescolumns .fa:hover {
+      color: white;
+      background-color: #305291; }
+    .issuescontainer .issuescolumns h2 {
       color: #305291;
       font-size: 1.17em;
       margin-top: 20px; }
-    .issuescontainer .issues p {
+    .issuescontainer .issuescolumns p {
       font-size: 1em;
       line-height: 2em;
       color: #666;
@@ -118,7 +128,7 @@ footer {
     font-family: sans-serif; }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .issuescontainer .issues {
+  .issuescontainer .issuescolumns {
     width: 46%; } }
 @media (max-width: 767px) {
   header .navbar {
@@ -127,7 +137,7 @@ footer {
     line-height: 3em;
     margin: 0 2% 0 2%; }
 
-  .issuescontainer .issues {
+  .issuescontainer .issuescolumns {
     width: 100%; }
 
   footer p {

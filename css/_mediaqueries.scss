@@ -1,0 +1,35 @@
+
+// tablet
+@media(min-width:768px) and (max-width:1024px){
+  .issuescontainer{
+    .issuescolumns{
+      width:46%;
+    }
+  }
+}
+
+// phone
+@media(max-width:767px){
+header{
+  .navbar{
+    padding:20px 5% 0 5%;
+  }
+
+  .headertext{
+    line-height:3em;
+    margin:0 2% 0 2%;
+  }
+}
+
+  .issuescontainer{
+    .issuescolumns{
+      width:100%;
+    }
+  }
+
+  footer{
+    p{
+      width:100%;
+    }
+  }
+}
